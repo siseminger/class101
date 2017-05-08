@@ -84,23 +84,23 @@ git config push.default simple
 
 virtualenv ~/.virtualenvs/class101
 source ~/.virtualenvs/class101/bin/activate
-echo '# Using python 2.7.5' > mysite/requirements.txt
+echo '# Using python 2.7.5' > project/requirements.txt
 pip install pip --proxy <ip:ort> --upgrade
 deactivate
 
 source ~/.virtualenvs/class101/bin/activate
 pip install --proxy <ip:port>  django
 pip freeze
-echo 'Django==1.11.1' >> mysite/requirements.txt
+echo 'Django==1.11.1' >> project/requirements.txt
 
 # https://docs.djangoproject.com/en/1.11/intro/tutorial01/
-django-admin startproject mysite
+django-admin startproject project
 
 python manage.py runserver
 # Log into to your server from elsewhere with ssh -x -C -L 8000:127.0.0.1:8000
 # and then request from browser http://127.0.0.1:8000
 
-# Alternative, edit mysite/mysite/settings and set ALLOWED_HOST = ['*']
+# Alternative, edit project/project/settings and set ALLOWED_HOST = ['*']
 python manage.py runserver 0.0.0.0:8000
 # request from browser http://fqdn:8000
 
@@ -116,14 +116,14 @@ git push origin master
 
 
 #### If we have time in in Week #1
-* lets look at the `mysite/mysite/settings`:
+* lets look at the `project/project/settings`:
     * database
     * other stuff
-* let's look at mysite/mysite/urls.py
+* let's look at project/project/urls.py
 * And ...
 
 ```
-    cd mysite
+    cd project
     python manage.py makemigrations
     python manage.py makemigrations
     python manage.py migrate
@@ -133,8 +133,31 @@ git push origin master
     # Browse to /admin
     # And then let's look at the uncoupling
 
-    vim mysite/mysite/urls.py
+    vim project/project/urls.py
     python manage.py runserver
+
+    # Other cool stuff
+    python manage.py dbshell
+    sqlite> select * from auth_user;
+    1|pbkdf2_sha256$36000$qwnljNIWs1TU$qhtnEkYC4JiElD6y7L6/lkGw+j3B7dpWW2Pm1Ak0DKs=||1|||a@b.com|1|1|2017-05-08 14:50:42.269990|boo
+    sqlite> .quit
+
+    python manage.py shell
+    >>> from django.conf import settings
+    >>> settings.ALLOWED_HOSTS
+    ['*']
+    >>>
+    >>> from django.contrib.auth.models import User as U
+    >>> u = U.objects.objects.all()
+    >>> u = U.objects.all()
+    >>> for ea in u:
+    ...     ea.email
+    ...     print('Email: {}'.format(ea.email))
+    ...
+         u'a@b.com'
+         Email: a@b.com
+    >>>
+
 ```
 
 ##### vim: ai et ts=4 sts=4 sw=4 nu ru
