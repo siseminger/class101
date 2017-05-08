@@ -85,6 +85,7 @@ git add .
 git commit -m 'my first commit'
 # git commit -am 'my first commit'
 git push origin master
+# git push
 ```
 
 
