@@ -49,6 +49,7 @@ What will be covered:
 
 * discussion on modern web development
 * setup python on RHEL7 (on windows or free pythonanywhere account left to the user)
+* Reference: https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 
 ```
 git clone git@github.com:johnedstone/class101.git
