@@ -1,7 +1,8 @@
 ## class101
-simple django openshift tutorial
+simple django openshift tutorial leading to deploying on Openshift
 
-This demo is written for working from a RHEL 7 client.
+This demo is written for working from a RHEL7 client, python 2.7.x and eventually the openshift client. You can also do this on a MAC, and for the not-so-faint-of heart on a Windows machine.  At no time will you need to be a superuser.  You can also start developing with a free account at pythonanywhere.com
+
 
 ### Prework for Week #1
 
