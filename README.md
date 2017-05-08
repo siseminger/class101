@@ -59,14 +59,14 @@ git config push.default simple
 
 virtualenv ~/.virtualenvs/class101
 source ~/.virtualenvs/class101/bin/activate
-echo '# Using python 2.7.5' > requirements.txt
+echo '# Using python 2.7.5' > mysite/requirements.txt
 pip install pip --proxy <ip:ort> --upgrade
 deactivate
 
 source ~/.virtualenvs/class101/bin/activate
 pip install --proxy <ip:port>  django
 pip freeze
-echo 'Django==1.11.1' >> requirements.txt
+echo 'Django==1.11.1' >> mysite/requirements.txt
 
 # https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 django-admin startproject mysite
