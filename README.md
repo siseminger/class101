@@ -85,9 +85,9 @@ python manage.py runserver 0.0.0.0:8000
     * database
     * other stuff
 * let's look at mysite/mysite/urls.py
-*
 * And ...
 
+```
     cd mysite
     python manage.py makemigrations
     python manage.py makemigrations
@@ -100,7 +100,6 @@ python manage.py runserver 0.0.0.0:8000
 
     vim mysite/mysite/urls.py
     python manage.py runserver
-
-
+```
 
 ##### vim: ai et ts=4 sts=4 sw=4 nu ru
