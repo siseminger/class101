@@ -77,6 +77,14 @@ python manage.py runserver
 # Alternative, edit mysite/mysite/settings and set ALLOWED_HOST = ['*']
 python manage.py runserver 0.0.0.0:8000
 # request from browser http://fqdn:8000
+
+git branch -a
+git remote -v
+git status
+git add .
+git commit -m 'my first commit'
+# git commit -am 'my first commit'
+git push origin master
 ```
 
 
