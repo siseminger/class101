@@ -33,6 +33,9 @@ What will be covered:
 * setup python on RHEL7 (on windows or free pythonanywhere account left to the user)
 
 ```
+git config user.name "johnedstone"
+git config user.email "johnedstone@gmail.com"
+git config push.default simple
 
 virtualenv ~/.virtualenvs/class101
 source ~/.virtualenvs/class101/bin/activate
