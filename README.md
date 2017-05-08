@@ -47,7 +47,31 @@ set modeline
 ### Week #1
 What will be covered:
 
-* discussion on modern web development
+* discussion on modern web development - no cgi-bin, no raw sql queries, but frameworks (ror, django, cakephp, catalyst, node/express, java?)
+* MVC, SOC, DRY, uncoupling, ORM
+
+```
+>>> from dashboard.models import BuildConfig as BC
+>>> from datetime import date, timedelta
+>>>
+>>> t = date.today()
+>>> t
+datetime.date(2017, 5, 8)
+>>>
+>>> y = t - timedelta(days=1)
+>>> y
+datetime.date(2017, 5, 7)
+>>>
+>>> BC.objects.filter(last_seen__lt=y).count()
+0
+>>> BC.objects.filter(last_seen__gt=y).count()
+150
+
+```
+
+* Examples of current customers: nodejs (new development), php (brought in legacy app), others
+
+#### Getting started
 * setup python on RHEL7 (on windows or free pythonanywhere account left to the user)
 * Reference: https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 
