@@ -76,6 +76,7 @@ datetime.date(2017, 5, 7)
 * Reference: https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 
 ```
+# This is an example - use your git, not mine, your username, etc., etc.
 git clone git@github.com:johnedstone/class101.git
 cd class101
 git config user.name "johnedstone"
