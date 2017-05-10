@@ -85,18 +85,20 @@ git config push.default simple
 
 virtualenv ~/.virtualenvs/class101
 source ~/.virtualenvs/class101/bin/activate
-echo '# Using python 2.7.5' > project/requirements.txt
 pip install pip --proxy <ip:ort> --upgrade
 deactivate
 
 source ~/.virtualenvs/class101/bin/activate
 pip install --proxy <ip:port>  django
 pip freeze
-echo 'Django==1.11.1' >> project/requirements.txt
 
 # https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 django-admin startproject project
 
+echo '# Using python 2.7.5' > project/requirements.txt
+echo 'Django==1.11.1' >> project/requirements.txt
+
+cd project
 python manage.py runserver
 # Log into to your server from elsewhere with ssh -x -C -L 8000:127.0.0.1:8000
 # and then request from browser http://127.0.0.1:8000
