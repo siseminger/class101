@@ -49,6 +49,8 @@ What will be covered:
 
 * discussion on modern web development - no cgi-bin, no raw sql queries, but frameworks (ror, django, cakephp, catalyst, node/express, java?)
 * MVC, SOC, DRY, uncoupling, ORM
+* Why PaaS (Openshift, Heroku)
+* Examples of current customers: nodejs (new development), php (brought in legacy app), others
 
 ```
 >>> from dashboard.models import BuildConfig as BC
@@ -69,7 +71,18 @@ datetime.date(2017, 5, 7)
 
 ```
 
-* Examples of current customers: nodejs (new development), php (brought in legacy app), others
+```
+oc login
+oc get pods
+
+NAME                       READY     STATUS    RESTARTS   AGE
+parse-image-data-1-grbi1   1/1       Running   0          3d
+postgresql-1-e72f2         1/1       Running   0          3d
+project.celery-1-1p7u7     1/1       Running   0          3d
+redis-1-3504l              1/1       Running   0          3d
+```
+
+
 
 #### Getting started
 * setup python on RHEL7 (on windows or free pythonanywhere account left to the user)
